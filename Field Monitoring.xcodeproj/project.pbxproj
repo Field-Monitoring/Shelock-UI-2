@@ -10,6 +10,8 @@
 		594603DE1F2163C800749FDE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594603DD1F2163C800749FDE /* MapViewController.swift */; };
 		594603E41F21721200749FDE /* CoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594603E31F21721200749FDE /* CoordinatesViewController.swift */; };
 		61A88EC2E7BB52BE137C5BF8 /* Pods_Field_Monitoring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773F77EC115D5D61A905E471 /* Pods_Field_Monitoring.framework */; };
+		9A064B401F4C12A40085697C /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A064B3F1F4C12A40085697C /* bg.jpg */; };
+		9A064B421F4C1A9A0085697C /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A064B411F4C1A9A0085697C /* logo1.png */; };
 		9A447F601F4A8CF2007E1798 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A447F5F1F4A8CF2007E1798 /* download.png */; };
 		9A447F621F4A8D01007E1798 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A447F611F4A8D01007E1798 /* Default.png */; };
 		9A447F641F4A8D31007E1798 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A447F631F4A8D31007E1798 /* Default@2x.png */; };
@@ -29,6 +31,8 @@
 		594603DD1F2163C800749FDE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		594603E31F21721200749FDE /* CoordinatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatesViewController.swift; sourceTree = "<group>"; };
 		773F77EC115D5D61A905E471 /* Pods_Field_Monitoring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Field_Monitoring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A064B3F1F4C12A40085697C /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		9A064B411F4C1A9A0085697C /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
 		9A447F5F1F4A8CF2007E1798 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		9A447F611F4A8D01007E1798 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9A447F631F4A8D31007E1798 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				9A64F2FD1F075ACC00BE4A42 /* Assets.xcassets */,
 				9A64F2FF1F075ACC00BE4A42 /* LaunchScreen.storyboard */,
 				9A64F3021F075ACC00BE4A42 /* Info.plist */,
+				9A064B411F4C1A9A0085697C /* logo1.png */,
+				9A064B3F1F4C12A40085697C /* bg.jpg */,
 				9A447F5F1F4A8CF2007E1798 /* download.png */,
 			);
 			path = "Field Monitoring";
@@ -178,12 +184,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A64F3011F075ACC00BE4A42 /* LaunchScreen.storyboard in Resources */,
+				9A064B401F4C12A40085697C /* bg.jpg in Resources */,
 				9A447F621F4A8D01007E1798 /* Default.png in Resources */,
 				9A64F2FE1F075ACC00BE4A42 /* Assets.xcassets in Resources */,
 				9A64F2FC1F075ACC00BE4A42 /* Main.storyboard in Resources */,
 				9A447F661F4AC3D4007E1798 /* map.jpg in Resources */,
 				9A447F681F4AC70E007E1798 /* background.jpg in Resources */,
 				9A447F641F4A8D31007E1798 /* Default@2x.png in Resources */,
+				9A064B421F4C1A9A0085697C /* logo1.png in Resources */,
 				9A447F601F4A8CF2007E1798 /* download.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

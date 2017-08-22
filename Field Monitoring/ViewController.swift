@@ -17,12 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet var mainView: UIView!
+    @IBOutlet weak var buttonOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.stopAnimating()
         
         secondaryView.layer.cornerRadius = 20;
+        buttonOutlet.layer.cornerRadius = 25;
        
     }
 
