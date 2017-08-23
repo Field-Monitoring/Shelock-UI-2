@@ -11,10 +11,34 @@ import Alamofire
 
 class ManagerViewController: UIViewController {
 
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet var taskTitle: UITextField!
+    
+    @IBOutlet var skills: UITextField!
+    
+    @IBOutlet var experience: UITextField!
+    
+    @IBOutlet var salary: UITextField!
+    
+    @IBOutlet var jobLocation: UITextField!
+    
+    @IBOutlet weak var latit: UILabel!
+    
+    @IBOutlet weak var longi: UILabel!
+    @IBOutlet weak var buttonOutlet: UIButton!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        taskTitle.layer.cornerRadius = 15;
+        skills.layer.cornerRadius = 15;
+        experience.layer.cornerRadius = 15;
+        salary.layer.cornerRadius = 15;
+        jobLocation.layer.cornerRadius = 15;
+        secondView.layer.cornerRadius = 20;
+        buttonOutlet.layer.cornerRadius = 20;
         // Do any additional setup after loading the view.
+        activityIndicator.stopAnimating()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,20 +47,7 @@ class ManagerViewController: UIViewController {
     }
     
 
-    @IBOutlet var taskTitle: UITextField!
 
-    @IBOutlet var skills: UITextField!
-    
-    @IBOutlet var experience: UITextField!
-
-    @IBOutlet var salary: UITextField!
-    
-    @IBOutlet var jobLocation: UITextField!
-    
-    @IBOutlet weak var latit: UILabel!
-    
-    @IBOutlet weak var longi: UILabel!
-    
     @IBAction func assignJob(_ sender: Any) {
         
 //        let jobTitleValue = taskTitle.text
