@@ -19,12 +19,21 @@ class ViewController: UIViewController {
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var buttonOutlet: UIButton!
     
+    
+    var activeTextField = UITextField()
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        print("\n\n\nFocused\n\n")
+        self.activeTextField = email
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.stopAnimating()
         
         secondaryView.layer.cornerRadius = 20;
-        buttonOutlet.layer.cornerRadius = 25;
+        buttonOutlet.layer.cornerRadius = 20;
+        email.layer.cornerRadius = 15;
+        password.layer.cornerRadius = 15;
        
     }
 
