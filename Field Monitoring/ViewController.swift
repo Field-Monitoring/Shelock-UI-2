@@ -15,11 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var secondaryView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var buttonOutlet: UIButton!
-    
-    
     var activeTextField = UITextField()
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -46,7 +43,6 @@ class ViewController: UIViewController {
         activityIndicator.startAnimating()
         let emailValue = email.text
         let passwordValue = password.text
-        
         let parameters = ["email" : emailValue, "password" : passwordValue ]
         let urlPath :String = "https://field-monitoring.herokuapp.com/users/login"
         
@@ -64,19 +60,19 @@ class ViewController: UIViewController {
                 
                 if ( status == "success"){
                     if position == "manager" {
-                        print ("Manager Success")
+//                        print ("Manager Success")
                         self.performSegue(withIdentifier:"managerLogin", sender: self)
                         self.activityIndicator.stopAnimating()
                     }
                     else if position == "employee"{
-                        print ("Employee Success")
-                        self.performSegue(withIdentifier:"jobSegue", sender: self)
+//                        print ("Employee Success")
+                        self.performSegue(withIdentifier:"employeeLogin", sender: self)
                         self.activityIndicator.stopAnimating()
                     }
                 }
                 else{
                     self.activityIndicator.stopAnimating()
-                    print("\n\n\nelse block\n\n\n")
+//                    print("\n\n\nelse block\n\n\n")
                     let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)

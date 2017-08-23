@@ -10,35 +10,33 @@ import UIKit
 import GoogleMaps
 
 class MapViewController: UIViewController {
-
-    var lat = ""
-    var long = ""
+    var lat : Double?
+    var long : Double?
+    var address: String?
+    var mapContent : String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
     
     override func loadView() {
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: 13.357126, longitude: 80.14286, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: lat!, longitude: long!, zoom: 12.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
         
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 13.357126, longitude: 80.14286)
-        marker.title = "R.M.K Engineering College"
-        marker.snippet = "India"
+        marker.position = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
+        marker.title = address
+        marker.snippet = mapContent
         marker.map = mapView
     }
-    
-   }
+}

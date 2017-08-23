@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yzn-TJ-gEP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yzn-TJ-gEP">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,7 +31,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trI-le-iZA">
                                 <rect key="frame" x="21" y="110" width="372" height="589"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="manager@mail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="sad_cloud.png" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N4f-Te-y5w">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="sad_cloud.png" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N4f-Te-y5w">
                                         <rect key="frame" x="37" y="339" width="298" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="SGI-VP-Gwz"/>
@@ -40,7 +40,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="manager" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="73c-65-s1t">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="73c-65-s1t">
                                         <rect key="frame" x="37" y="379" width="298" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -116,7 +116,7 @@
                         <outlet property="password" destination="73c-65-s1t" id="91i-CW-hP4"/>
                         <outlet property="secondaryView" destination="trI-le-iZA" id="A9x-Vr-hNm"/>
                         <segue destination="qrX-qC-TMn" kind="show" identifier="managerLogin" id="v7n-11-Lhu"/>
-                        <segue destination="CpQ-7v-Vca" kind="show" identifier="jobSegue" id="0qI-Ga-Fha"/>
+                        <segue destination="pKD-OL-AZq" kind="show" identifier="employeeLogin" id="ahK-4f-IxB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -284,29 +284,109 @@
             <point key="canvasLocation" x="3049" y="-88"/>
         </scene>
         <!--Employee View Controller-->
-        <scene sceneID="wtH-x4-iP0">
+        <scene sceneID="C6L-v8-T06">
             <objects>
-                <viewController id="CpQ-7v-Vca" customClass="EmployeeViewController" customModule="Field_Monitoring" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pKD-OL-AZq" customClass="EmployeeViewController" customModule="Field_Monitoring" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L9s-Ur-hzV"/>
-                        <viewControllerLayoutGuide type="bottom" id="s83-rI-5Pw"/>
+                        <viewControllerLayoutGuide type="top" id="EUN-Mq-bok"/>
+                        <viewControllerLayoutGuide type="bottom" id="i3D-LX-yT7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CoY-0R-gQo" customClass="Em">
+                    <view key="view" contentMode="scaleToFill" id="efM-xI-k4h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roz-Yr-4sJ">
+                                <rect key="frame" x="165" y="341" width="84" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Find Jobs"/>
+                                <connections>
+                                    <action selector="findJobsButton:" destination="pKD-OL-AZq" eventType="touchUpInside" id="8tq-n7-guc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="waU-xf-SUX" kind="show" identifier="sendJobs" id="siS-WY-v14"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtN-zr-wms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.6231884057972" y="672.554347826087"/>
+        </scene>
+        <!--Jobs View Controller-->
+        <scene sceneID="KJ6-Fv-gwK">
+            <objects>
+                <viewController id="waU-xf-SUX" customClass="JobsViewController" customModule="Field_Monitoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IVZ-5u-ELa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vc0-vX-isD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N8T-cK-ME2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5tw-gc-tqq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="140" id="DeO-46-wFi" customClass="jobsTableViewCell" customModule="Field_Monitoring" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DeO-46-wFi" id="5vV-54-DIk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="139.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itA-OU-mU2">
+                                                    <rect key="frame" x="21" y="0.0" width="121" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqO-QN-xta">
+                                                    <rect key="frame" x="21" y="76" width="145" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfi-pj-nP6">
+                                                    <rect key="frame" x="211" y="8" width="145" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="experienceVal" destination="xqO-QN-xta" id="xE8-Tm-1z7"/>
+                                            <outlet property="salaryVal" destination="bfi-pj-nP6" id="TlB-Mc-yyB"/>
+                                            <outlet property="titleVal" destination="itA-OU-mU2" id="Pr7-k1-8UQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="waU-xf-SUX" id="pIV-ym-Eov"/>
+                                    <outlet property="delegate" destination="waU-xf-SUX" id="ajT-da-x7p"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5w-nh-hH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sun-3P-oOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257" y="903"/>
+            <point key="canvasLocation" x="2013.0434782608697" y="672.554347826087"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5dX-z9-3qW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yzn-TJ-gEP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9qo-DD-hHQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9qo-DD-hHQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
