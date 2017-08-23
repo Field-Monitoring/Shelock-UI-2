@@ -17,6 +17,5 @@ class Jobs{
         self.title = title
         self.experience = experience
         self.salary = salary
-        
     }
 }

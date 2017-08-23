@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var activeTextField = UITextField()
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        print("\n\n\nFocused\n\n")
+//        print("\n\n\nFocused\n\n")
         self.activeTextField = email
     }
     override func viewDidLoad() {
